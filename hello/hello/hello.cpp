@@ -8,6 +8,8 @@
 #include "hello.h"
 #include "MainFrm.h"
 
+#include <windows.h>
+
 #include "ChildFrm.h"
 #include "helloDoc.h"
 #include "helloView.h"
@@ -238,5 +240,10 @@ void CAboutDlg::OnBnClickedshowmessage()
 	// TODO:  在此添加控件通知处理程序代码
 	// MessageBox.Show("Hello");
 	// MessageBox("xx", "xxx", MB_ICONINFORMATION);
+
+	// Win32API
 	::MessageBox(NULL, TEXT("TTT"), TEXT("DDD"), MB_OKCANCEL);
+
+	// Cwd encapsulated API
+	MessageBox(TEXT("ddd"), TEXT("ddd"), MB_OK);
 }
