@@ -62,6 +62,7 @@ BEGIN_MESSAGE_MAP(Cmfc_dialog1Dlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(btn_pop_dialog, &Cmfc_dialog1Dlg::OnBnClickedpopdialog)
 END_MESSAGE_MAP()
 
 
@@ -152,3 +153,10 @@ HCURSOR Cmfc_dialog1Dlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void Cmfc_dialog1Dlg::OnBnClickedpopdialog()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	::MessageBox(NULL, TEXT("abc"), TEXT("bbb"), MB_OK);
+}

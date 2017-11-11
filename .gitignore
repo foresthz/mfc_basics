@@ -5,3 +5,5 @@ Release
 *.sdf
 ipch
 *.sln
+*.aps
+*.opensdf
