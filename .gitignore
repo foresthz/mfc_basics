@@ -4,4 +4,4 @@ Release
 *.suo
 *.sdf
 ipch
-
+*.sln
