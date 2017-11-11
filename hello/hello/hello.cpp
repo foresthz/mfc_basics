@@ -181,6 +181,8 @@ protected:
 // 实现
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedshowmessage();
 };
 
 CAboutDlg::CAboutDlg() : CDialogEx(CAboutDlg::IDD)
@@ -193,6 +195,7 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
+	ON_BN_CLICKED(btn_show_message, &CAboutDlg::OnBnClickedshowmessage)
 END_MESSAGE_MAP()
 
 // 用于运行对话框的应用程序命令
@@ -228,3 +231,12 @@ void ChelloApp::SaveCustomState()
 
 
 
+
+
+void CAboutDlg::OnBnClickedshowmessage()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	// MessageBox.Show("Hello");
+	// MessageBox("xx", "xxx", MB_ICONINFORMATION);
+	::MessageBox(NULL, TEXT("TTT"), TEXT("DDD"), MB_OKCANCEL);
+}
